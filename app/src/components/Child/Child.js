@@ -1,8 +1,11 @@
 import React from 'react';
+import revengeofthesith from '../Lifecycle/pictures/revengeofthesith.jpg'
 
 const Child = (props) => {
     // throw(Error)
-    return (<div>Child Component</div>)
+    // throw console.error();
+    
+    return (<img src={revengeofthesith} alt="pic" width='800' height='800'/>)
 }
 
 export default Child;

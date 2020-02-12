@@ -1,5 +1,10 @@
 import React from 'react'
-// import Child from '../Child/Child'
+import Child from '../Child/Child'
+import newhope from './pictures/newhope.jpg'
+import returnofthejedi from './pictures/returnofthejedi.jpg'
+import phantommenace from './pictures/phantommenace.jpg'
+import clonewars from './pictures/clonewars.jpeg'
+
 
 class Lifecycle extends React.Component{
 constructor(props){
@@ -9,7 +14,8 @@ constructor(props){
         render: true,
         update: "Unclicked",
         allExpressions: [],
-        hasError: false
+        hasError: false,
+        imgURL: newhope
     }
     console.log("constructor")
 }
@@ -19,19 +25,24 @@ constructor(props){
 //         return null
 //     }
 //     console.log("getDerivedStateFromProps")
-//     return {expression : props.expression}
+//     return {
+//         expression : props.expression,
+//         imgURL: props.imgURL
+//     }
 // }
 
 // callFromRender(){
 //     this.setState({
 //         expression: "It's me render",
+//         imgURL: returnofthejedi,
 //         render: false
 //     })
 // }
 
 // componentDidMount() {
 //     this.setState({
-//         expression: "Components have mounted!"
+//         expression: "Components have mounted!",
+//         imgURL: phantommenace
 //     })
 //     console.log("componentDidMount")
 // }
@@ -39,7 +50,8 @@ constructor(props){
 // updateExpression(){
 //     this.setState({
 //         expression: "Updated the expression",
-//         update: "clicked"
+//         update: "clicked",
+//         imgURL: clonewars
 //     })
 // }
 
@@ -81,8 +93,9 @@ render(){
             }
             }>Change Expression</button>
             <h1 id="previous">{this.state.lastExpression}</h1>
+            <img src={this.state.imgURL} alt="pic" width='800' height='800'/>
             {
-                //this.state.hasError ?<h1>Something has gone wrong</h1>:<Child /> 
+                // this.state.hasError ?<h1>Something has gone wrong</h1>:<Child /> 
             }
         </div>)
     }

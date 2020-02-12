@@ -1,5 +1,6 @@
 import React from 'react';
 import Lifecycle from './Lifecycle/Lifecycle'
+import empirestrikesback from './Lifecycle/pictures/empirestrikesback.jpg'
 
 
 function App() {
@@ -7,12 +8,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Hello World
-        </p>
-      <input></input>
       </header>
-      <Lifecycle expression={"Hello from App"} />
+      <Lifecycle expression={"Hello from App"} imgURL={empirestrikesback} />
     </div>
   );
 }
