@@ -5,6 +5,29 @@ import returnofthejedi from './pictures/returnofthejedi.jpg'
 import phantommenace from './pictures/phantommenace.jpg'
 import clonewars from './pictures/clonewars.jpeg'
 
+/* React Component Life Cycle 
+
+Mounting:
+-constructor
+-getDerivedStateFromProps
+-Render
+-ComponentDidMount
+
+Updating:
+-getDerivedStateFromProps
+-shouldComponentUpdate
+-render
+-getSnapShotBeforeUpdate ** Has to be used with componentDidUpdate
+-componentDidUpdate
+
+Unmounting
+-componentWillUnmount
+
+Error Handling
+-static getDerivedStateFromError
+-componentDidCatch
+
+*/
 
 class Lifecycle extends React.Component{
 constructor(props){
@@ -47,6 +70,11 @@ constructor(props){
 //     console.log("componentDidMount")
 // }
 
+// shouldComponentUpdate(){
+//     console.log("shouldComponentUpdate")
+//     return true;
+// }
+
 // updateExpression(){
 //     this.setState({
 //         expression: "Updated the expression",
@@ -55,10 +83,6 @@ constructor(props){
 //     })
 // }
 
-// shouldComponentUpdate(){
-//     console.log("shouldComponentUpdate")
-//     return true;
-// }
 
 // getSnapshotBeforeUpdate(prevProps, prevState) {
 //     console.log("getsnapshotbeforeupdate")
